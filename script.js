@@ -72,9 +72,9 @@ function moveNoButtonAwayFrom(pointerX, pointerY) {
   yesBtn.style.transform = `scale(${yesScale})`;
 
   // fun escalating text (optional)
-  if (dodges === 3) question.textContent = "Imogen… please? 🥺";
-  if (dodges === 6) question.textContent = "Okay you’re definitely teasing 😭";
-  if (dodges === 9) question.textContent = "Last chance… YES? 😈";
+  if (dodges === 3) question.textContent = "Uhhh sweetness ur supposed to click yes😅";
+  if (dodges === 6) question.textContent = "Okay cmon do u wanna go La Cappola or not🤨";
+  if (dodges === 9) question.textContent = "Last chance… YES????????";
 }
 
 // Dodge radius: when cursor gets within this many pixels, No runs
