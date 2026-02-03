@@ -1,18 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Valentine?</title>
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <!-- Confetti canvas sits on top when we need it -->
+    <!-- Confetti canvas -->
     <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
 
     <main class="page">
       <section class="card" id="card">
+        <!-- Main bear image -->
         <img
           id="topImg"
           class="top-img"
@@ -20,26 +23,36 @@
           alt="Cute bear holding a heart"
         />
 
-        <h1 id="question" class="question">Imogen will you be my valentine?</h1>
+        <h1 id="question" class="question">
+          Imogen will you be my valentine?
+        </h1>
 
         <p class="tiny-note">Try clicking “No” if you can 😈</p>
 
         <div class="play-area" id="playArea">
-          <button id="yesBtn" class="btn btn-yes" type="button">Yes</button>
-          <button id="noBtn" class="btn btn-no" type="button">No</button>
+          <button id="yesBtn" class="btn btn-yes" type="button">
+            Yes
+          </button>
+
+          <button id="noBtn" class="btn btn-no" type="button">
+            No
+          </button>
         </div>
 
+        <!-- Result screen -->
         <div id="result" class="result hidden" aria-live="polite">
           <div class="yay">YAY! 🎉</div>
+
           <img
             class="yay-media"
             src="assets/bear_yay.png"
-            alt="Cute bear celebrating"
+            alt="Cute bear celebrating with confetti"
           />
         </div>
       </section>
     </main>
 
+    <!-- Link JS -->
     <script src="script.js"></script>
   </body>
 </html>
