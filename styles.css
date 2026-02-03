@@ -1,0 +1,124 @@
+:root {
+  --pink: #c2185b;
+  --pink-dark: #a9154f;
+  --bg1: #f6e7f0;
+  --bg2: #efe2f6;
+  --card: rgba(255, 255, 255, 0.75);
+  --text: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, var(--bg1), var(--bg2));
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(720px, 92vw);
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  padding: 26px 22px 30px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.top-img {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 4px auto 10px;
+}
+
+.question {
+  margin: 6px 0 8px;
+  font-size: clamp(24px, 3.2vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.tiny-note {
+  margin: 0 0 16px;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.play-area {
+  position: relative;
+  width: min(520px, 86vw);
+  height: 170px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-yes {
+  background: var(--pink);
+  color: white;
+  padding: 14px 34px;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(194, 24, 91, 0.25);
+}
+
+.btn-yes:hover { filter: brightness(1.03); }
+
+.btn-no {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.06);
+  color: #222;
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+/* Result */
+.result { margin-top: 18px; }
+.hidden { display: none; }
+
+.yay {
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.yay-media {
+  width: min(380px, 80vw);
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+  background: #fff;
+}
+
+/* Confetti canvas */
+.confetti {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
